@@ -1,7 +1,7 @@
 
-# React Native for Plaid Link (iOS)
+# React Native Bridge for Plaid Link (iOS)
 
-### Implementation recommended by Plaid API
+### Supports RN > 60
 
 **Please refer to the [official repo](https://github.com/plaid/plaid-link-examples/tree/master/react-native) for official source code**
 
@@ -28,7 +28,6 @@ To complete the steps in this example the following software is needed:
   % yarn install
   % yarn react-native link react-native-plaid-link
 ```
-* Integrate the native Plaid Link for iOS SDK (LinkKit.framework) into the iOS part of your react-native project, see the [documentation](https://plaid.com/docs/link/ios/) for details.
 * In your `App.js` import Plaid Link using:
 	`import PlaidLink from 'react-native-plaid-link';`
 * Create a `linkHandler` object (we recommend doing so in `componentDidMount()`) and replace any of the placeholder `<#VARIABLE#>`s in the example below according to your setup (for details see the [Plaid Link documentation](https://plaid.com/docs/quickstart/#client-side-link-configuration)):
@@ -45,4 +44,3 @@ To complete the steps in this example the following software is needed:
 ```
 * Next, when you would like to show the Plaid Link flow call `open()` on the `linkHandler`, e.g. `this.linkHandler.open();` which will modally present Plaid Link and guide the user through the process of linking their account with your application through Plaid
 * Once the user has completed, exited, or errored out of the flow the appropriate callback method is invoked
-* A detailed working example can be found in [`react-native/demo/App.js`](/react-native/demo/App.js)
